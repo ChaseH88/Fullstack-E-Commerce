@@ -1,8 +1,8 @@
 // Import the homepage
-import Home from "./index";
+import Items from "./index";
 
 // Export immediately
-export default Home;
+export default Items;
 
 
 // **This will allow for sharing between the pages

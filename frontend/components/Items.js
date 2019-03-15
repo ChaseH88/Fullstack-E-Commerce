@@ -7,11 +7,15 @@ import gql from "graphql-tag";
 
 // Components
 import Item from "./Item";
+import Pagination from "./Pagination";
+
+// Utilities
+import { perPage } from "../config";
 
 // Query
 const ALL_ITEMS_QUERY = gql`
-  query ALL_ITEMS_QUERY {
-    items {
+  query ALL_ITEMS_QUERY($skip: Int = 0, $first: Int= ${perPage}) {
+    items(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       title
       price
@@ -37,10 +41,16 @@ const ItemsList = styled.div`
 
 class Items extends Component {
   render(){
+    // Get the skip number for the items
+    const skipVar = this.props.page * perPage - perPage;
     return(
       <Center>
+        <Pagination page={this.props.page} />
         <p>Items</p>
-        <Query query={ALL_ITEMS_QUERY}>
+        <Query query={ALL_ITEMS_QUERY} variables={{
+          skip: skipVar,
+          first: perPage
+        }}>
         {/*payload = payload.data, payload.error, etc*/}
           {({ data, error, loading }) => {
             if(loading) return <p>Loading...</p>;
@@ -55,6 +65,7 @@ class Items extends Component {
             )
           }}
         </Query>
+        <Pagination page={this.props.page} />
       </Center>
     )
   }
