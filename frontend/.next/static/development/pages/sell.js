@@ -28098,7 +28098,7 @@ var Sell = function Sell(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*****************************!*\
   !*** multi ./pages/sell.js ***!
   \*****************************/
@@ -28123,5 +28123,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[6,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=sell.js.map
