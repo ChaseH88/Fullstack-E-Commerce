@@ -6,6 +6,7 @@ import NavStyles from "./styles/NavStyles"
 
 // Regular Components
 import User from "./User";
+import Signout from "./Signout";
 
 class Nav extends React.Component {
   render(){
@@ -21,9 +22,7 @@ class Nav extends React.Component {
               <Link href="/sell">
                 <a>sell</a>
               </Link>
-              <Link href="/signup">
-                <a>Logout</a>
-              </Link>
+              <Signout />
             </Fragment>
           )}
           {!currentUser && (
