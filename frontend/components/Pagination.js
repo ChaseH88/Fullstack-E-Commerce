@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Utilities
-import { perPage } from "../config";
+import { SiteNameMeta, perPage } from "../config";
 
 // Styled Components
 import PaginationStyles from "./styles/PaginationStyles";
@@ -30,7 +30,7 @@ const Pagination = props => (
         return(
           <PaginationStyles>
             <Head>
-              <title>Sick Fits! Page {page} of {pages}</title>
+              <title>{SiteNameMeta} | Page {page} of {pages}</title>
             </Head>
 
             {/* Previous Button */}

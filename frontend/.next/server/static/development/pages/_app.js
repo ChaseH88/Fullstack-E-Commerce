@@ -113,6 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! nprogress */ "nprogress");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config */ "./config.js");
 var _jsxFileName = "C:\\Users\\Chase\\Documents\\code-projects\\Advanced-React\\sick-fits\\frontend\\components\\Header.js";
 
 
@@ -133,13 +134,15 @@ next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeComplete = funct
 
 next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeError = function () {
   nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
-}; // Props are passed down from the main page component
+}; // Utilities
 
+
+ // Props are passed down from the main page component
 
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.h1.withConfig({
   displayName: "Header__Logo",
   componentId: "sc-2cpreo-0"
-})(["font-size:4rem;margin:0 0 0 2rem;position:realtive;z-index:2;transform:skew(-7deg);a{padding:0.5rem 1rem;background:", ";color:#fff;text-transform:uppercase;text-decoration:none;}@media screen and (max-width:1300px){margin:0;text-align:center;}"], function (props) {
+})(["font-size:2em;margin:0 0 0 2rem;position:realtive;z-index:2;transform:skew(-7deg);a{padding:0.5em 1em;background:", ";color:#fff;text-transform:uppercase;text-decoration:none;}@media screen and (max-width:1300px){margin:0;text-align:center;}"], function (props) {
   return props.theme.red;
 });
 var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.header.withConfig({
@@ -155,58 +158,58 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 61
     },
     __self: this
-  }, "Sick Fits"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, _config__WEBPACK_IMPORTED_MODULE_6__["SiteName"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 64
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sub-bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: this
   }, "Search")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 69
     },
     __self: this
   }, "Cart"));
@@ -229,7 +232,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config */ "./config.js");
 var _jsxFileName = "C:\\Users\\Chase\\Documents\\code-projects\\Advanced-React\\sick-fits\\frontend\\components\\Meta.js";
+
 
 
 
@@ -237,7 +242,7 @@ var Meta = function Meta() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -245,14 +250,14 @@ var Meta = function Meta() {
     content: "width=device-width, initial-scale=1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     charSet: "utf-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -260,7 +265,7 @@ var Meta = function Meta() {
     href: "/static/favicon.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -269,16 +274,16 @@ var Meta = function Meta() {
     href: "/static/nprogress.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
-  }, "Sick Fits!"));
+  }, _config__WEBPACK_IMPORTED_MODULE_2__["SiteNameMeta"]));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Meta);
@@ -691,7 +696,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n@font-face {\n  font-family: 'radnika_next';\n  src: url(\"../../static/radnikanext-medium-webfont.woff2\")\n  format('woff2');\n  font-weight: normal;\n  font-style: normal;\n}\n  html {\n    font-size: ", "\n  }\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-family: radnika_next\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n@font-face {\n  font-family: 'radnika_next';\n  src: url(\"../../static/radnikanext-medium-webfont.woff2\")\n  format('woff2');\n  font-weight: normal;\n  font-style: normal;\n}\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-family: radnika_next;\n    font-size: ", "\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -705,7 +710,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
  // VARIBLES FOR THE SITE CSS
 
 var theme = {
-  baseFont: '1rem',
+  baseFont: '16px',
   red: '#FF0000',
   black: '#393939',
   grey: '#3A3A3A',
@@ -737,14 +742,18 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: endpoint, perPage */
+/*! exports provided: SiteName, SiteNameMeta, endpoint, perPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SiteName", function() { return SiteName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SiteNameMeta", function() { return SiteNameMeta; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endpoint", function() { return endpoint; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
+var SiteName = "Store";
+var SiteNameMeta = "Store";
 var endpoint = "http://localhost:4000";
 var perPage = 4;
 

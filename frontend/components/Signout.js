@@ -11,7 +11,7 @@ const SIGN_OUT_MUTATION = gql`
       message
     }
   }
-`
+`;
 
 const Signout = props => (
   <Mutation mutation={SIGN_OUT_MUTATION} refetchQueries={[

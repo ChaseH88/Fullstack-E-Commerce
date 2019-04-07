@@ -11,15 +11,18 @@ Router.onRouteChangeStart = () => { NProgress.start() };
 Router.onRouteChangeComplete = () => { NProgress.done() };
 Router.onRouteChangeError = () => { NProgress.done() };
 
+// Utilities
+import { SiteName } from "../config";
+
 // Props are passed down from the main page component
 const Logo = styled.h1`
-  font-size: 4rem;
+  font-size: 2em;
   margin: 0 0 0 2rem;
   position: realtive;
   z-index: 2;
   transform: skew(-7deg);
   a {
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     background: ${props => props.theme.red};
     color: #fff;
     text-transform: uppercase;
@@ -55,7 +58,7 @@ const Header = () => (
     <div className="bar">
     <Logo>
       <Link href="/">
-        <a>Sick Fits</a>
+        <a>{SiteName}</a>
       </Link>
     </Logo>
       <Nav />

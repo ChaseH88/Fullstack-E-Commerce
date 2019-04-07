@@ -2,7 +2,7 @@ import styled, { injectGlobal } from "styled-components";
 
 // VARIBLES FOR THE SITE CSS
 export const theme = {
-  baseFont: '1rem',
+  baseFont: '16px',
   red: '#FF0000',
   black: '#393939',
   grey: '#3A3A3A',
@@ -21,16 +21,14 @@ injectGlobal`
   font-weight: normal;
   font-style: normal;
 }
-  html {
-    font-size: ${theme.baseFont}
-  }
   *, *:before, *:after {
     box-sizing: border-box;
   }
   body {
     padding: 0;
     margin: 0;
-    font-family: radnika_next
+    font-family: radnika_next;
+    font-size: ${theme.baseFont}
   }
   a {
     text-decoration: none;
