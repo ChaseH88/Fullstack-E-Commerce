@@ -3,6 +3,9 @@ const jwt = require("jsonwebtoken");
 const { randomBytes } = require("crypto");
 const { promisify } = require("util");
 
+// For Email
+const { transport, makeAnEmail } = require("../mail");
+
 // token expiry time
 const tokenTime = 1000 * 60 * 60 * 24 * 365;
 
@@ -11,8 +14,23 @@ const Mutations = {
   // CREATE ITEM
   async createItem(parent, args, ctx, info){
     // Check if logged in
+    if(!ctx.request.userId){
+      throw new Error("You must be logged in to create an item.")
+    }
 
-    const item = await ctx.db.mutation.createItem({data: { ...args }}, info );
+
+    const item = await ctx.db.mutation.createItem(
+      {
+        data: {
+          // create relationship to item
+          user: {
+            connect: {
+              id: ctx.request.userId
+            }
+          },
+          ...args
+        }
+      }, info );
       return item
     },
     
@@ -112,8 +130,16 @@ const Mutations = {
         where: { email: args.email },
         data: { resetToken, resetTokenExpiry}
       });
-      return { message: "You have requested a reset password token." }
+      
       // email the token to the user
+      const mailRes = await transport.sendMail({
+        from: process.env.EMAIL_FROM,
+        to: user.email,
+        subject: "Your Password Reset Token",
+        html: makeAnEmail(`Here is your password reset token \n\n <a href="${process.env.FRONTEND_URL}/reset?resetToken=${resetToken}">Click Here to Reset Your Password</a>`)
+      });
+      // return the message
+      return { message: "You have requested a reset password token." }
     },
 
     // PASSWORD RESET LOGIC
